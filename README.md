@@ -1,1 +1,2 @@
-# Simple-Note-App-in-Vanilla-JavaScript
+# Simple Note App in Vanilla JavaScript
+
