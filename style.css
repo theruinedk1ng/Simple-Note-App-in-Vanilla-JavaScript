@@ -1,0 +1,279 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    align-items: center;
+    display: flex;
+    padding-right: 50px;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: xx-large;
+    padding-left: 50px;
+}
+
+header > div {
+    margin-left: auto; 
+    display: flex;
+    gap: 10px; 
+}
+
+
+header button{
+    background-color: rgb(72, 157, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header button:hover{
+    background-color: rgb(50, 130, 230);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.dialog {
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.dialog-content {
+    padding: 20px;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.dialog-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.closeDialog{
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.dialogOptions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cancelDialog {
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cancelDialog:hover {
+    background-color: #ccc;
+}
+
+.save-btn {
+    background-color: rgb(72, 157, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+    background-color: rgb(50, 130, 230);
+}
+
+body.dark-mode{
+    background-color:#2e2e2e;
+    color: white;
+}
+
+body.dark-mode .dialog {
+    background-color: #2e2e2e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .formGroup input,
+body.dark-mode .formGroup textarea {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #f1f1f1;
+}
+
+body.dark-mode .formGroup input::placeholder,
+body.dark-mode .formGroup textarea::placeholder {
+    color: #bbb;
+}
+
+body.dark-mode .cancelDialog {
+    background-color: #444;
+    color: #f1f1f1;
+}
+
+body.dark-mode .cancelDialog:hover {
+    background-color: #555;
+}
+
+body.dark-mode .save-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+body.dark-mode .save-btn:hover {
+    background-color: #2563eb;
+}
+
+
+.no-notes {
+    text-align: center;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-color: #bbbbbb4b;
+  }
+  50% {
+    background-color: #a0a0a04b;
+  }
+  100% {
+    background-color: #bbbbbb4b;
+  }
+}
+
+.note {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    max-width: 250px;
+    text-align: left;
+    background-color: #dad9d94b;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+
+.note h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #191b23;
+  user-select: none;
+}
+
+.note p {
+  margin: 0 0 15px 0;
+  color: #333;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  /* Remove the line-clamp so text can take all needed space */
+}
+
+.note:hover {
+    animation: backgroundShift 4s ease-in-out infinite;
+}
+
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.edit-btn {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover {
+    background-color: rgb(72, 157, 255);
+}
+
+
+
+.delete-btn {
+    background-color: transparent;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #da0e1fb5;
+}
+
+.new-note-btn {
+    background-color: rgb(72, 157, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.new-note-btn:hover {
+    background-color: rgb(50, 130, 230);
+}

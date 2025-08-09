@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Notes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="notes.png">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Notes</h1>
+        <div>
+            <button class="addNote" onclick="openNoteDialog()">+ Add Note</button>
+            <button id="darkModeToggle" class="theme">🌙</button>
+        </div>
+    </header>
+
+    <main id="notesContainer" class="container">
+    </main>
+
+    <dialog id="noteDialog" class="dialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h2>New Note</h2>
+                <button class="closeDialog" onclick="closeNoteDialog()">X</button>
+            </div>
+        </div>
+        <form id="noteForm">
+            <div class="formGroup">
+                <label for="noteTitle">Title</label>
+                <input type="text" id="noteTitle" name="title" placeholder="Enter note title..." required>
+            </div>
+
+            <div class="formGroup">
+                <label for="noteContent">Content</label>
+                <textarea id="noteContent" name="content" placeholder="Write your note here..." required></textarea>
+            </div>
+
+            <div class="dialogOptions">
+                <button type="button" class="cancelDialog" onclick="closeNoteDialog()">Cancel</button>
+                <button type="submit" class="save-btn">Save Note</button>
+            </div>
+
+        </form>
+    </dialog>
+
+</body>
+
+</html>
